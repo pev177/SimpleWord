@@ -20,7 +20,7 @@ jobs:
           chmod +x gradlew
           set -o pipefail
           ./gradlew assembleRelease --no-daemon 2>&1 | tee build.log || {
-            grep -E "^e: |error:|ERROR|What went wrong|> " build.log | head -40 | while IFS= read -r line; do
+            grep -vE "^> Task|^$" build.log | grep -E -A4 "^e: |error:|What went wrong" | grep -v "^--" | head -10 | while IFS= read -r line; do
               echo "::error::${line//%/%25}"
             done
             exit 1
