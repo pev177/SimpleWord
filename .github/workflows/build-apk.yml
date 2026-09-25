@@ -18,7 +18,13 @@ jobs:
         run: |
           echo "sdk.dir=$ANDROID_HOME" > local.properties
           chmod +x gradlew
-          ./gradlew assembleRelease --no-daemon --stacktrace
+          set -o pipefail
+          ./gradlew assembleRelease --no-daemon 2>&1 | tee build.log || {
+            grep -E "^e: |error:|ERROR|What went wrong|> " build.log | head -40 | while IFS= read -r line; do
+              echo "::error::${line//%/%25}"
+            done
+            exit 1
+          }
       - uses: actions/upload-artifact@v4
         with:
           name: SimpleWord-apk
