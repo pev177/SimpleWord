@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp" android:height="108dp"
+    android:viewportWidth="108" android:viewportHeight="108">
+    <!-- лист бумаги -->
+    <path android:fillColor="#FFFFFF" android:pathData="M36,28h28l10,10v42h-38z" />
+    <path android:fillColor="#C9D6EA" android:pathData="M64,28v10h10z" />
+    <!-- строки текста -->
+    <path android:fillColor="#2B579A" android:pathData="M42,46h26v3h-26zM42,53h26v3h-26zM42,60h26v3h-26zM42,67h16v3h-16z" />
+</vector>

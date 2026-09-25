@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/action_open" android:title="Открыть…"
+        android:icon="@drawable/ic_open" app:showAsAction="ifRoom" />
+    <item android:id="@+id/action_save" android:title="Сохранить"
+        android:icon="@drawable/ic_save" app:showAsAction="ifRoom" />
+    <item android:id="@+id/action_send" android:title="Отправить текст">
+        <menu>
+            <item android:id="@+id/action_send_whatsapp" android:title="В WhatsApp" />
+            <item android:id="@+id/action_send_telegram" android:title="В Telegram" />
+            <item android:id="@+id/action_send_other" android:title="В другое приложение…" />
+        </menu>
+    </item>
+    <item android:id="@+id/action_new" android:title="Новый документ" />
+    <item android:id="@+id/action_save_as" android:title="Сохранить как… (.docx)" />
+    <item android:id="@+id/action_export_pdf" android:title="Экспорт в PDF" />
+    <item android:id="@+id/action_export_txt" android:title="Экспорт в TXT" />
+    <item android:id="@+id/action_clear_format" android:title="Очистить форматирование" />
+    <item android:id="@+id/action_fit_page" android:title="Показать страницу целиком" />
+    <item android:id="@+id/action_reset_zoom" android:title="Сбросить масштаб ввода" />
+    <item android:id="@+id/action_auto_zoom" android:title="Автоувеличение при вводе"
+        android:checkable="true" />
+</menu>
