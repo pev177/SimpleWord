@@ -13,7 +13,8 @@
         android:background="@color/primary"
         app:titleTextColor="#FFFFFF"
         app:subtitleTextColor="#DDE6F5"
-        android:theme="@style/ThemeOverlay.Material3.Dark.ActionBar" />
+        android:theme="@style/ThemeOverlay.Material3.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.Material3.Light" />
 
     <!-- Панель форматирования (прокручивается по горизонтали) -->
     <HorizontalScrollView
