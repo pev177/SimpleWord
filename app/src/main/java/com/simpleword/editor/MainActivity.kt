@@ -217,7 +217,7 @@ class MainActivity : AppCompatActivity() {
                 }
                 inChange = false
                 if (count == 0) updateTypingFromCursor()
-                onContentChanged()
+                onDocChanged()
                 if (!autoEditing && count == 1 && start < e.length && e[start] == '\n') continueBullet(e, start)
             }
         })
@@ -236,7 +236,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun onContentChanged() {
+    private fun onDocChanged() {
         dirty = true
         updateTitle()
         recordPending = true
